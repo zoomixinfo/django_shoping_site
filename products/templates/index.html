@@ -1,0 +1,25 @@
+{% extends 'theme.html' %}
+<html>
+    {% block content%}
+    {% for product in products%}
+    <a href="">
+      <div class="product_box">
+        <div class="product_img-box">
+          <img src={{product.image}} alt="" style="height:200px; width:200px"/>
+          <span>
+            Sale
+          </span>
+        </div>
+        <div class="product_detail-box">
+          <span>
+           Rs {{product.price}} /-
+          </span>
+          <p>
+            {{product.name}}
+          </p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+    {% endblock %}
+</html>
